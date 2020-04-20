@@ -1,1 +1,38 @@
+Py Code for RoBERTa in Google Colab:
 
+#pip install
+pip install happytransformer
+#import 
+import happytransformer
+from happytransformer import HappyROBERTA
+#initialize HappyTransformer
+happy_r = HappyROBERTA("roberta-large")
+#Example 1
+test1 = "Birds are flying over the [MASK] and They are happy"
+summary = happy_r.predict_mask(test1,num_results=5)
+print(summary)
+#print(summary[0]["word"])
+
+
+Py Code for BERT Google Colab:
+pip install happytransformer
+import happytransformer
+from happytransformer import HappyBERT
+happy_r = HappyBERT("bert-large-cased")
+#Example 1
+test2 = "Birds are flying over the [MASK] and They are happy"
+summary = happy_r.predict_mask(test2,num_results=5)
+print(summary)
+#print(summary[0]["word"])
+
+
+Py Code for XLNet in Google Colab:
+pip install happytransformer
+import happytransformer
+from happytransformer import HappyXLNET
+happy_r = HappyXLNET("xlnet-large-cased")
+#Example 1
+test3 = "Birds are flying over the [MASK] and They are happy"
+summary = happy_r.predict_mask(test3,num_results=5)
+print(summary)
+#print(summary[0]["word"])
